@@ -1,0 +1,20 @@
+```
+nasm -f bin boot_stack.asm -o boot_stack
+
+qemu-system-x86_64 -s -S -m 512 -hda ./boot_stack
+
+pwndbg> x/10bx 0x7ff8
+0x7ff8:	0x00	0x00	0x43	0x00	0x42	0x00	0x41	0x00
+0x8000:	0x00	0x00
+
+16-BIT Real mode
+push 对应的是两个字节
+
+
+顺便记录一下之前学习的：
+16 位机器环境中 boot 会被加载到 0x7c00 这个位置，因此 gdb 时，可以 b *0x7c00
+
+[org 0x7c00] 可以定义全局偏移地址
+
+```
+
