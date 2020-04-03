@@ -22,6 +22,8 @@ call print_hex
 
 call print_nl
 
+jmp $
+
 %include "boot_sect_print.asm"
 %include "boot_sect_print_hex.asm"
 
