@@ -1,4 +1,4 @@
-![](/home/vangelis/Github/operating_system/03-boot-sect/深度截图_选择区域_20200710222417.png)
+![](./深度截图_选择区域_20200710222417.png)
 
 Boot Sector 加载到内存中基址为 0x7c00
 
