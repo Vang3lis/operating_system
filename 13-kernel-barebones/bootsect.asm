@@ -18,7 +18,7 @@ jmp $
 %include "../07-boot-sector-disk/boot_sect_disk_load.asm"
 %include "../08-32bit-print/32bit-print.asm"
 %include "../09-32bit-gdt/32bit-gdt.asm"
-%include "../10-32bit-enter/32bit-swtich.asm"
+%include "../10-32bit-enter/32bit-switch.asm"
 
 [bits 16]
 load_kernel:
