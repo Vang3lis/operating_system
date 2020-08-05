@@ -4,6 +4,58 @@
 
 
 
+## Makefile 知识
+
+### shell
+
+shell 函数用来执行 shell 命令
+
+`$(shell echo 1234)`
+
+
+
+### wildcard
+
+wildcard 函数用来在 Makefile 中，替换 Bash 的通配符
+
+`C_SOURCES = $(wildcard kernel/*.c)`
+
+
+
+### subst
+
+subst函数用来文本替换，格式如下
+
+`$(subst from, to, text)`
+
+`$(subst ee, EE, feet on the street)`
+
+
+
+### patsubst
+
+oatsubst 函数用于模式匹配的替换，格式如下
+
+`$(patsub pattern, replacement, text)`
+
+`$(patsubst %.c, %.o, c.c bar.c)`
+
+
+
+### 替换后缀名
+
+替换后缀名函数的写法是：变量名+冒号+后缀名替换规则。实际上它是patsubst函数的一种简写形式
+
+`min: $(OUTPUT:.js=.min.js)`
+
+把变量OUTPUT中的后缀名为 .js 的名字全部替换成 .min.js 的名字
+
+
+
+> <https://www.ruanyifeng.com/blog/2015/02/make.html>
+
+
+
 ## 问题
 
 其中遇到了两个问题
@@ -19,3 +71,5 @@ command 3: gdb -ex "xxx"
 ```
 
 但是这样写会导致这个指令是满足严格先后顺序的，最后改为 `comm1 & comm2 & comm3` 即可
+
+查阅资料：值得注意的是，每行命令在一个单独的 shell 中执行。这些 shell 之间没有继承关系，唯一解决的办法是将两行指令写在一行（用分隔符隔开），或者在换行符前利用反斜杠转义，或者加上 `.ONESHELL:` 指令
