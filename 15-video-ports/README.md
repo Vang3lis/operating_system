@@ -7,7 +7,11 @@
 在 os-dev.pdf 的 6.1 节中有如下一段话
 
 ```
-By writing to the screen we have actually already encountered a friendlier form of hardware I/O, known as memory-mapped I/O, whereby data written directly to a certain address  range  in  main  memory  is  written  to  the  device’s  internal  memory buffer,  but now it is time to understand more about this interaction between CPU and hardware.
+By writing to the screen we have actually already encountered a friendlier form of
+hardware I/O, known as memory-mapped I/O, whereby data written directly to a certain
+address  range  in  main  memory  is  written  to  the  device’s  internal  memory
+buffer,  but now it is time to understand more about this interaction between CPU and
+hardware.
 ```
 
 其中提到 `a friendly form of  hardware I/O, know as memory-mapped I/O`这种打印到屏幕上的`I/O`是一种映射到内存的`I/O`，因此只要在内存的某个地址上写上需要打印的内容即可显示在屏幕中。
@@ -86,7 +90,8 @@ cat boot/bootsect.bin kernel.bin > os-image
 -ex command
     Execute a single GDB command.
 
-    This option may be used multiple times to call multiple commands. It may also be interleaved with ‘-command’ as required.
+    This option may be used multiple times to call multiple commands. It may also be
+    interleaved with ‘-command’ as required.
 
     gdb -ex 'target sim' -ex 'load' \
    -x setbreakpoints -ex 'run' a.out
@@ -97,7 +102,8 @@ cat boot/bootsect.bin kernel.bin > os-image
 ```
 -command file
 -x file
-    Execute commands from file file. The contents of this file is evaluated exactly as the source command would. See Command files.
+    Execute commands from file file. The contents of this file is evaluated exactly as
+    the source command would. See Command files.
 ```
 
 最后在 `Makefile` 中可以用 `gdb -x ./script` 的方式解决该问题
