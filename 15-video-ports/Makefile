@@ -7,6 +7,8 @@ CC = gcc
 GDB = gdb
 
 CFLAGS = -m32 -g -fno-pie
+# for intel architecture
+# CFLAGS = -m32 -g -fno-pie -masm=intel
 
 os-image: boot/bootsect.bin kernel.bin
 	cat $^ > os-image
