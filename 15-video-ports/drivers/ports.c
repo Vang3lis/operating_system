@@ -31,7 +31,7 @@ void port_byte_out (unsigned short port, unsigned char data) {
 	__asm__("out %%al, %%dx": : "a" (data), "d" (port));
 }
 
-unsigned short port_wort_in (unsigned short port) {
+unsigned short port_word_in (unsigned short port) {
 	unsigned short result;
 	
 	// __asm__("in ax, dx": "=a" (result): "d" (port));
@@ -41,7 +41,7 @@ unsigned short port_wort_in (unsigned short port) {
 	return result;
 }
 
-void port_wort_out (unsigned short port, unsigned short data) {
+void port_word_out (unsigned short port, unsigned short data) {
 	//__asm__("out dx, ax": : "a" (data), "d" (port));
 	
 	__asm__("out %%ax, %%dx": : "a" (data), "d" (port));
