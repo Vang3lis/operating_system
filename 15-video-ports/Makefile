@@ -22,7 +22,7 @@ kernel.elf: boot/kernel_entry.o $(OBJ)
 run: os-image
 	qemu-system-i386 -fda os-image
 
-debug: os-image
+debug: os-image kernel.elf
 	qemu-system-i386 -s -S -fda os-image& \
 	# gdb -ex "set architecture i8086" -ex "target remote:1234" -ex "symbol-file kernel.elf" -ex "b *0x7c00" -ex "c"
 	gdb -x ./script
