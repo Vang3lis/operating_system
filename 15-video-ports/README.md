@@ -109,3 +109,19 @@ cat boot/bootsect.bin kernel.bin > os-image
 最后在 `Makefile` 中可以用 `gdb -x ./script` 的方式解决该问题
 
 > <https://sourceware.org/gdb/current/onlinedocs/gdb/File-Options.html>
+
+
+
+## 补充
+
+在写编号 16 文件夹的内容时，发现自己的程序出错了，但是又找不到问题，于是把`set_cursor` 的内容放到了该文件夹测试。
+
+进行如下对于`REG_SCREEN`的`CTRL`（0x3d4）和`DATA`(0x3d5)操作，即可设置光标到第一个点的位置。
+
+```
+out(0x3d4, 14)
+out(0x3d5, 0)
+out(0x3d4, 15)
+out(0x3d5, 0)
+```
+
