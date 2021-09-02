@@ -219,3 +219,20 @@ mov dh, 31
 mov dl, [BOOT_DRIVE] 
 call disk_load
 ```
+
+
+
+## gcc 
+
+`gcc version 10` 的时候存在一些 `extern` 变量的问题，具体可以看 
+
+```
+https://gcc.gnu.org/gcc-10/porting_to.html
+```
+
+然后根据以下步骤，修改 `Makefile` 即可
+
+```
+https://stackoverflow.com/questions/5188267/checking-the-gcc-version-in-a-makefile
+```
+

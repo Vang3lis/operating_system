@@ -6,7 +6,14 @@ OBJ = $(C_SOURCES:.c=.o cpu/interrupt.o)
 CC = gcc
 GDB = gdb
 
+GCCVERSION = $(shell gcc --version | grep ^gcc | sed 's/^.* //g')
 CFLAGS = -m32 -g -fno-pie
+
+ifeq "$(GCCVERSION)" "10.3.0":
+	# https://gcc.gnu.org/gcc-10/porting_to.html
+	# https://stackoverflow.com/questions/5188267/checking-the-gcc-version-in-a-makefile
+	CFLAGS += -fcommon
+endif
 
 os-image: boot/bootsect.bin kernel.bin
 	cat $^ > os-image
