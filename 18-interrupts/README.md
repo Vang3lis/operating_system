@@ -17,7 +17,9 @@ Goal: Set up the Interrupt Descriptor Table to handle CPU interrupts
 
 
 `GDT` 是全局符号描述表
+
 `IDT` 是中断向量表
+
 `ISRs` 全称为 `Interrupt Service Routines` 翻译为中断服务例程
 
 #### idt_gate_t 结构体
