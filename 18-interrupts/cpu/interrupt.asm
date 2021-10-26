@@ -26,11 +26,11 @@ isr_common_stub:
 	sti
 	iret ; pops 5 thing at once: EIP, CS, EFLAGS, SS, and ESP
 
-; We don't get information about which interrupt wa caller
+; We don't get information about which interrupt was caller
 ; when the handler is run, so we will need to hava a different handler
 ; for every interrupt
 ; Futhermore, some interrupts push an error code onto the stack but others
-; don't, so we will push a dummy error code (push 0) for those whitch don't,
+; don't, so we will push a dummy error code (push 0) for those which don't,
 ; so that we have a consistent stack for all of them
 
 global isr0
