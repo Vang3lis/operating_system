@@ -100,13 +100,17 @@ void PIC_remap(int offset1, int offset2)
 ### PIC 资料
 
 > https://web.archive.org/web/20160327010849/http://www.jamesmolloy.co.uk/tutorial_html/5.-IRQs%20and%20the%20PIT.html
+> 
 > https://wiki.osdev.org/PIC
+> 
 > https://zhuanlan.zhihu.com/p/26464793
+> 
 > https://www.jianshu.com/p/16bf6aaa1ade
 
 ### PIT 理解
 
 > https://www.cnblogs.com/bitzhuwei/p/os-in-30-days-10-programmable-interval-timer.html
+> 
 > http://airtrack.me/posts/2015/05/05/操作系统实现（三）：中断/
 
 ## 问题
