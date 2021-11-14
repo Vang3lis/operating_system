@@ -3,6 +3,8 @@
 #include "../cpu/ports.h"
 #include "../cpu/isr.h"
 #include "../libc/string.h"
+#include "../libc/mem.h"
+#include "../libc/function.h"
 #include "../kernel/kernel.h"
 
 #define SC_MAX 0x39
@@ -41,6 +43,8 @@ static void keyboard_callback(registers_t regs)
 		add(input_buffer, letter);
 		kprint(str);
 	}
+
+	UNUSED(regs);
 }
 
 void init_keyboard()

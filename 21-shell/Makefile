@@ -7,7 +7,7 @@ CC = gcc
 GDB = gdb
 
 GCCVERSION = $(shell gcc --version | grep ^gcc | sed 's/^.* //g')
-CFLAGS = -m32 -g -fno-pie
+CFLAGS = -m32 -g -fno-pie -nostdlib -nostdinc -fno-builtin -fno-stack-protector -nostartfiles -nodefaultlibs -Wall -Wextra -Werror
 
 ifeq "$(GCCVERSION)" "10.3.0"
 	# https://gcc.gnu.org/gcc-10/porting_to.html
