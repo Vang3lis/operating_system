@@ -61,7 +61,7 @@ void memset(char* dest, char value, int lenth);
 void int_to_ascii(int n, char* str);
 int strlen(char* s);
 int strcmp(char* s1, char* s2);
-void backspcae(char* s);        // 删除用户输入buffer中的一个字符
+void backspace(char* s);        // 删除用户输入buffer中的一个字符
 void add(char* s, char ch);     // 给用户输入buffer中添加一个字符
 ```
 
