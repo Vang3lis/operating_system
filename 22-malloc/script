@@ -1,0 +1,9 @@
+# set architecture i8086
+target remote:1234
+symbol-file ./kernel.elf
+# b *0x7c00
+set architecture i386
+b *0x1000
+# b keyboard_callback 
+# b kmalloc
+c
