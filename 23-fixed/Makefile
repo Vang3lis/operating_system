@@ -43,7 +43,7 @@ debug: os-image kernel.elf
 
 clean: 
 	rm -rf *.bin *.o *.elf
-	rm -rf ./kernel/*.o ./cpu/*.o ./drivers/*.o ./boot/*.o ./libc/*.o
+	rm -rf ./kernel/*.o ./cpu/*.o ./drivers/*.o ./boot/*.o ./boot/*.bin ./libc/*.o
 	rm -rf ./peda*
 
 full-clean:
