@@ -35,10 +35,10 @@ debug: os-image
 
 clean: 
 	rm -rf *.bin *.dis *.o *.elf
-	rm -rf ./kernel/*.o ./boot/*.o
+	rm -rf ./kernel/*.o ./boot/*.o ./boot/*.bin
 
 full-clean:
 	rm -rf *.bin *.dis *.o *.elf os-image
-	rm -rf ./kernel/*.o ./boot/*.o
+	rm -rf ./kernel/*.o ./boot/*.o ./boot/*.bin
 	rm -rf ./peda* ./.gdb_history
 
