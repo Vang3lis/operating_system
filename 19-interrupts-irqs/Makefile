@@ -43,10 +43,10 @@ debug: os-image kernel.elf
 
 clean: 
 	rm -rf *.bin *.o *.elf
-	rm -rf ./kernel/*.o ./cpu/*.o ./drivers/*.o ./boot/*.o
+	rm -rf ./kernel/*.o ./cpu/*.o ./drivers/*.o ./boot/*.o ./boot/*.bin
 
 full-clean:
 	rm -rf *.bin *.o *.elf
-	rm -rf ./kernel/*.o ./cpu/*.o ./drivers/*.o ./boot/*.o
+	rm -rf ./kernel/*.o ./cpu/*.o ./drivers/*.o ./boot/*.o ./boot/*.bin
 	rm -rf ./peda* ./.gdb_history
 	rm -rf os-image
